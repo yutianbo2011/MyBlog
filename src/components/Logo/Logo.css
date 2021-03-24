@@ -1,0 +1,16 @@
+.logo{
+    text-align: center;
+    position: relative;
+    opacity: 1;
+}
+.logo .title{
+    font-family: 'Dancing Script', Helvetica ;
+    font-size: 75px;
+    font-weight: 900;
+    text-decoration: none;
+    color: #333;
+    position: absolute ;
+    text-align: center;
+    top: 50px;
+    left: 40%;
+}
