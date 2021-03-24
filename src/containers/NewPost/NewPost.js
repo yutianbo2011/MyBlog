@@ -55,15 +55,14 @@ class NewPost extends React.Component {
         const currentId = this.props.id;
         return (
             <Layout>
-                <div >
+                <div className = 'information'>
                     <Card style={{marginBottom: '20px'}}>
-                        <div>
-                            <div>
+                        <div >
+                            <div style={{paddingTop: '50px'}}>
                                 <label id='title' >Title</label>
                                 <input type='text' id='title' 
                                 defaultValue ={currentId === -1? '': String(this.props.MyBlogs[currentId].title)}
-                                onChange={this.setNewTitle} 
-                                > 
+                                onChange={this.setNewTitle} > 
                                 </input>
                             </div>
                             <div>
@@ -72,22 +71,22 @@ class NewPost extends React.Component {
                                 defaultValue={currentId === -1? '': this.props.MyBlogs[currentId].subtitle}></input>
                             </div>
                             <div>
-                                <label id='imageurl'>Image Url</label>
+                                <label id='imageurl'>Image Url (Optional)</label>
                                 <input type='url' id='imageurl' onChange={(event)=>this.setNewImageurl(event)} 
                                 defaultValue={currentId === -1? '': this.props.MyBlogs[currentId].imageUrl}></input>
                             </div>
                             <div>
                                 <label id='content'>Content</label>
                                 <textarea id='content' rows='6' cols='70' onChange={(event)=>this.setNewContent(event)}
-                                defaultValue={currentId === -1? '': this.props.MyBlogs[currentId].content}
-                                >
-
+                                defaultValue={currentId === -1? '': String(this.props.MyBlogs[currentId].content)}>
                                 </textarea>
                                 </div>
                             <div>
                                 <NavLink id = 'cancel' to='/mypost'>Cancel</NavLink>
                                 <NavLink id = 'confirm' to='/mypost' 
-                                onClick={ currentId===-1? ()=>this.handleAddPost(): ()=>this.handleUpdatePost()} >Confirm</NavLink>
+                                onClick={ currentId===-1? ()=>this.handleAddPost(): ()=>this.handleUpdatePost()} >
+                                    Confirm
+                                </NavLink>
                             </div>
                         </div>
                     </Card>

@@ -4,13 +4,6 @@ import Layout from '../../components/Layout/Layout';
 import './Home.css'
 import {ExistPosts} from '../../assets/data/ExistPosts';
 
-// const SideImage = props => {
-//     return (
-//         <div style={{ height: `${props.height}px`  }}>
-//             <img src={props.src} alt="" />
-//         </div>
-//     );
-// }
 
 const Home  = () => {
     return (

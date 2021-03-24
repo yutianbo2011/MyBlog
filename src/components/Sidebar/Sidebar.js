@@ -15,7 +15,7 @@ const Sidebar = (props) => {
                     <img style = {{}} src="https://raw.githubusercontent.com/yutianbo2011/My-Profile-Page/master/src/assets/figure/my_photo.jpg" alt="" />
                 </div>
                 <div className="cardBody">
-                    <p className="personalBio">My name is Tianbo Yu I am a Front end developer. Hope you like this blog site :)</p>
+                    <p className="personalBio">My name is Tianbo Yu and I am a Front end developer<br></br> Hope you like this blog site :)</p>
                 </div>
             </Card>
       </div>

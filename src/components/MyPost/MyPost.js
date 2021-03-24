@@ -1,31 +1,44 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Card from '../UI/Card/Card';
 import './MyPost.css';
 import {NavLink} from 'react-router-dom';
 import {updateCurrentId} from '../../redux/actions';
 import { connect } from "react-redux";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleDoubleDown, faAngleDoubleUp } from "@fortawesome/free-solid-svg-icons";
 
 
 
 const MyPost = (props) => {
-    console.log(props);
     const {id, title, subtitle, content, imageUrl, } = props.post;
-    console.log("currrent id", id);
     const handleEdit = (id)=>{
-        console.log("edit id", id);
         props.updateCurrentId(id);
     }
+    const [ReadMore, setReadMore] = useState(0);
+    
   return(
-    <div style={props.style}>
+    <div >
         <Card style={{marginBottom: '20px'}}>
+            {imageUrl?
             <div className="postImageWrapper">
                 <img src={imageUrl} alt=""/>
-            </div>
+            </div> : <br></br> }
+            
             <div style={{textAlign: 'center'}}>
                 <h2>{title}</h2>
+                <NavLink to='/newpost' onClick={()=>handleEdit(id)} ><span id='edit'>Edit</span></NavLink>
                 <span>{subtitle}</span> 
-                <NavLink to='/newpost' onClick={()=>handleEdit(id)} >Edit</NavLink>
-                <p>{content}</p> 
+                <p className='content' 
+                style={ReadMore === 1? {maxHeight:"100%"}: {maxHeight: "100px"}} >{content}</p> 
+                {ReadMore === 0?
+                <a className='readmore' onClick={()=>setReadMore((1+ReadMore)%2)}> 
+                    <FontAwesomeIcon icon={faAngleDoubleDown} className='icon' />
+                    Read More
+                </a>: 
+                <a className='readless' onClick={()=>setReadMore((1+ReadMore)%2)}>
+                    <FontAwesomeIcon icon={faAngleDoubleUp} className='icon' />
+                    Read Less
+                </a>}
             </div>
         </Card>
     </div>

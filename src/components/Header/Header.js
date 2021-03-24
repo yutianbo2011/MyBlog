@@ -10,7 +10,7 @@ const Hero = (props) => {
     <div>
         <Card>
             <div style={{ padding: '50px 0'  }}>
-            <Logo />
+              <Logo />
             </div>
             <Navbar />
         </Card>

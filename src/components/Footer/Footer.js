@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Footer.css";
+import "./Footer.css";
 import styleIcon from "../LinkIcon/LinkIcon.css";
 import { LinkIcon } from "../LinkIcon/LinkIcon";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -18,28 +18,28 @@ export const Footer = () => {
     "tianbo@tamu.edu",
   ];
   return (
-    <footer className={styles.footer}>
-      <section className={styles.container}>
-        <div className={styles.item}>
-          <FontAwesomeIcon icon={faPhone} className={styles.icon} />
-          <p>Call</p>
-          <p>{phone}</p>
+    <footer className='footer'>
+      <section className='container'>
+        <div className='item'>
+          <FontAwesomeIcon icon={faPhone} className='icon' />
+          <p className='text'>Call</p>
+          <p className='text'>{phone}</p>
         </div>
-        <div className={styles.item}>
-          <FontAwesomeIcon icon={faEnvelope} className={styles.icon} />
-          <p>Email</p>
-          <p>{email}</p>
+        <div className='item'>
+          <FontAwesomeIcon icon={faEnvelope} className='icon' />
+          <p className='text'>Email</p>
+          <p className='text'>{email}</p>
         </div>
-        <div className={styles.item}>
-          <FontAwesomeIcon icon={faPlus} className={styles.icon} />
-          <p>Follow me on</p>
+        <div className='item'>
+          <FontAwesomeIcon icon={faPlus} className='icon' />
+          <p className='text'>Follow me on</p>
           <p>
             <LinkIcon
               href={linkedin}
               icon={faLinkedin}
-              style={styleIcon.small}
+              style='small'
             />
-            <LinkIcon href={github} icon={faGithub} style={styleIcon.small} />
+            <LinkIcon href={github} icon={faGithub} style='small' />
           </p>
         </div>
       </section>
