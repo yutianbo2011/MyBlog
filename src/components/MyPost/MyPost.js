@@ -34,14 +34,14 @@ const MyPost = (props) => {
                 <p className='content' 
                 style={ReadMore === 1? {maxHeight:"100%"}: {maxHeight: "100px"}} >{content}</p> 
                 {ReadMore === 0?
-                <a className='readmore' onClick={()=>setReadMore((1+ReadMore)%2)}> 
+                <label className='readmore' onClick={()=>setReadMore((1+ReadMore)%2)}> 
                     <FontAwesomeIcon icon={faAngleDoubleDown} className='icon' />
                     Read More
-                </a>: 
-                <a className='readless' onClick={()=>setReadMore((1+ReadMore)%2)}>
+                </label>: 
+                <label className='readless' onClick={()=>setReadMore((1+ReadMore)%2)}>
                     <FontAwesomeIcon icon={faAngleDoubleUp} className='icon' />
                     Read Less
-                </a>}
+                </label>}
             </div>
         </Card>
     </div>
