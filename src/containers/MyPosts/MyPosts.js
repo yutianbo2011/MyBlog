@@ -1,6 +1,4 @@
 import React from 'react';
-import Card from '../../components/UI/Card/Card';
-import BlogPost from '../../components/BlogPost/BlogPost';
 import Layout from '../../components/Layout/Layout';
 import './MyPosts.css';
 import MyPost from '../../components/MyPost/MyPost.js'
@@ -11,10 +9,6 @@ import {connect} from 'react-redux';
 import { NavLink } from 'react-router-dom';
 
 class MyPosts extends React.Component{
-  constructor(props){
-    super(props);
-  }
-
   addNewBlogHandler = ()=>{
     this.setState({addnewBlog: true});
     console.log("add new bolg set as true");
@@ -37,7 +31,7 @@ class MyPosts extends React.Component{
           <br></br>
           <br></br>
           {this.props.UpdatedBlogs.map((post, index)=>{
-            return (<MyPost key = {index} post = {post}  />);
+            return (<MyPost key = {index} post = {post} edit={true}  />);
           }) }
         </div>
       </Layout>

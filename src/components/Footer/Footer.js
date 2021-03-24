@@ -1,6 +1,5 @@
 import React from "react";
 import "./Footer.css";
-import styleIcon from "../LinkIcon/LinkIcon.css";
 import { LinkIcon } from "../LinkIcon/LinkIcon";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
@@ -37,9 +36,9 @@ export const Footer = () => {
             <LinkIcon
               href={linkedin}
               icon={faLinkedin}
-              style='small'
+              className='small'
             />
-            <LinkIcon href={github} icon={faGithub} style='small' />
+            <LinkIcon href={github} icon={faGithub} className='small' />
           </p>
         </div>
       </section>

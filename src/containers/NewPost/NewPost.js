@@ -37,6 +37,11 @@ class NewPost extends React.Component {
         this.setState({newBlog: {...this.state.newBlog, imageUrl: event.target.value}});
     }
 
+    // uploadNewImage = (event)=>{
+    //     this.setState({newBlog: {...this.state.newBlog, imageUrl: event.target.files[0].name}});
+    //     console.log(event.target.files);
+    // }
+
     handleAddPost (){
         // console.log("add post", this.state.newBlog);
         this.props.addPost(this.state.newBlog);
@@ -74,6 +79,8 @@ class NewPost extends React.Component {
                                 <label id='imageurl'>Image Url (Optional)</label>
                                 <input type='url' id='imageurl' onChange={(event)=>this.setNewImageurl(event)} 
                                 defaultValue={currentId === -1? '': this.props.MyBlogs[currentId].imageUrl}></input>
+
+                                {/* <input type='file' onChange={(event)=>this.uploadNewImage(event)} ></input> */}
                             </div>
                             <div>
                                 <label id='content'>Content</label>

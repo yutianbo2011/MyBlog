@@ -15,7 +15,10 @@ const MyPost = (props) => {
         props.updateCurrentId(id);
     }
     const [ReadMore, setReadMore] = useState(0);
-    
+    let editBar;
+    if(props.edit){
+        editBar=<NavLink to='/newpost' onClick={()=>handleEdit(id)} ><span id='edit'>Edit</span></NavLink>;
+    }
   return(
     <div >
         <Card style={{marginBottom: '20px'}}>
@@ -26,8 +29,8 @@ const MyPost = (props) => {
             
             <div style={{textAlign: 'center'}}>
                 <h2>{title}</h2>
-                <NavLink to='/newpost' onClick={()=>handleEdit(id)} ><span id='edit'>Edit</span></NavLink>
-                <span>{subtitle}</span> 
+                {editBar}
+                <h4>{subtitle}</h4> 
                 <p className='content' 
                 style={ReadMore === 1? {maxHeight:"100%"}: {maxHeight: "100px"}} >{content}</p> 
                 {ReadMore === 0?
