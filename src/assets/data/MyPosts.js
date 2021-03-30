@@ -1,6 +1,6 @@
 import img1 from '../image/1.png';
 import img2 from '../image/2.png';
-import React from "react";
+
 
 export const MyPosts = [
     {
