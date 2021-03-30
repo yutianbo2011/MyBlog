@@ -22,9 +22,9 @@ class MyPosts extends React.Component{
     return(
       <Layout>
         <div style={{width: '70%'}}>
-          <div id = 'addNewPost'>
-              <NavLink to="/newpost" >
-                <FontAwesomeIcon icon={faPlusCircle} className='icon' />
+          <div >
+              <NavLink to="/newpost" id = 'addNewPost'>
+                <FontAwesomeIcon icon={faPlusCircle} className='icon'  />
                 Add New Blog
               </NavLink>
           </div>
