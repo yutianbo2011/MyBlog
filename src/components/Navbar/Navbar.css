@@ -1,7 +1,8 @@
 .navbar{
     display: flex;
     justify-content: space-between;
-    padding: 0px 0;
+    padding: 2vw 0 0.5vw 0;
+    margin-bottom: 1vw;
 }
 .navbar ul{
     margin: 0;
@@ -11,34 +12,12 @@
     list-style: none;
     display: inline-block;
 }
-.navbar ul li a{
+.navbar ul li .navlink{
     text-decoration: none;
     display: block;
     font-size: 2vw;
     text-transform: capitalize;
     font-weight: 400;
     color: #565673;
-    padding: 0 30px;
-}
-.search form{
-    display: flex;
-    margin: 0 10px;
-}
-
-.searchInput{
-    border: 0;
-    width: 0;
-    transition: width 0.1s ease-in;
-}
-
-.searchInput.active{
-    width: 150px;
-}
-
-.searchInput:focus{
-    outline: none;
-}
-
-.searchIcon{
-    cursor: pointer;
+    padding: 0 3vw;
 }

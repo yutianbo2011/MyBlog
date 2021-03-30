@@ -8,14 +8,16 @@ import './Layout.css';
 
 const Layout = (props) => {
   return(
-      <React.Fragment>
-          <Header />
+      // <React.Fragment>
+      <div>
+        <Header />
           <div className="container">
             {props.children}
             <Sidebar />
           </div>
           <Footer/>
-      </React.Fragment>
+      </div>
+      // </React.Fragment>
    )
  }
 

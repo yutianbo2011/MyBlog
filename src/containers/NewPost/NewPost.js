@@ -51,6 +51,13 @@ class NewPost extends React.Component {
         });
     }
 
+    handleCancel(){
+        this.setState( {
+            ...this.state, 
+            newBlog:{ id: this.props.MyBlogs.length, title: '', subtitle: '', content:'',imageUrl: '',}
+        });
+    }
+
     handleUpdatePost(){
         this.props.updatePost(this.state.newBlog);
     }
@@ -63,34 +70,36 @@ class NewPost extends React.Component {
                 <div className = 'information'>
                     <Card style={{marginBottom: '20px'}}>
                         <div >
-                            <div style={{paddingTop: '50px'}}>
+                            <div className='input' style={{paddingTop: '50px'}}>
                                 <label id='title' >Title</label>
                                 <input type='text' id='title' 
                                 defaultValue ={currentId === -1? '': String(this.props.MyBlogs[currentId].title)}
                                 onChange={this.setNewTitle} > 
                                 </input>
                             </div>
-                            <div>
+                            <div className='input'>
                                 <label id='subtitle'>Subtitle</label>
                                 <input type='text' id='subtitle' onChange={(event)=>this.setNewSubtitle(event)} 
                                 defaultValue={currentId === -1? '': this.props.MyBlogs[currentId].subtitle}></input>
                             </div>
-                            <div>
+                            <div className='input'>
                                 <label id='imageurl'>Image Url (Optional)</label>
                                 <input type='url' id='imageurl' onChange={(event)=>this.setNewImageurl(event)} 
                                 defaultValue={currentId === -1? '': this.props.MyBlogs[currentId].imageUrl}></input>
 
                                 {/* <input type='file' onChange={(event)=>this.uploadNewImage(event)} ></input> */}
                             </div>
-                            <div>
+                            <div className='input'>
                                 <label id='content'>Content</label>
                                 <textarea id='content' rows='6' cols='70' onChange={(event)=>this.setNewContent(event)}
                                 defaultValue={currentId === -1? '': String(this.props.MyBlogs[currentId].content)}>
                                 </textarea>
                                 </div>
                             <div>
-                                <NavLink id = 'cancel' to='/mypost'>Cancel</NavLink>
-                                <NavLink id = 'confirm' to='/mypost' 
+                                <NavLink className='cc' id = 'cancel' to='/mypost' onClick={()=>this.handleCancel()}>
+                                    Cancel
+                                </NavLink>
+                                <NavLink className='cc' id = 'confirm' to='/mypost' 
                                 onClick={ currentId===-1? ()=>this.handleAddPost(): ()=>this.handleUpdatePost()} >
                                     Confirm
                                 </NavLink>

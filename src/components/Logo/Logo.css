@@ -2,7 +2,8 @@
     text-align: center;
     /* position: relative; */
     opacity: 1;
-    padding: 0;
+    padding: 5vw 0 0 0;
+    margin:0;
 
 }
 .logo .title{
@@ -13,15 +14,15 @@
     color: #333;
     position: absolute ;
     text-align: center;
-    top: 100px;
+    top: 10vw;
     left: 37%;
     
 }
 
 #logoImg{
     text-align: center;
-    margin: auto;
-    padding: auto;
+    margin: 0;
+    padding: 0;
     width: 100%;
     
 }

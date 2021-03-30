@@ -4,13 +4,13 @@ export const ExistPosts = [
         imageUrl: "https://images.squarespace-cdn.com/content/v1/5c38cbc2297114b389cca7bc/1551978701411-55J8DIXFCWK3NI9CI70M/ke17ZwdGBToddI8pDm48kNfWIFkio5dogv_2WhYVOUZZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpzl2y5hPvKz-yA70TeVqe391ypQ70ctlPswArxtoApeSh5Cbk4L05MFFBiqmwzoFwI/fitness+5.jpg?format=2500w",
         title: "A CASE FOR EXERCISE VARIETY: 21 REASONS",
         subtitle: "Sora Blogging Tips",
-        content: "When it comes exercise variety, particularly in regards to strength and resistance training, you’ll often see opposite ends of the spectrum in the fitness industry. Some trainers and coaches will emphasize little if any variety suggesting that simply performing the bare basic movements while continuing to progressively overload them is the most effective training strategy.",
+        content: "When it comes exercise variety, particularly in regards to strength and resistance training, you’ll often see opposite ends of the spectrum in the fitness industry.  \n Some trainers and coaches will emphasize little if any variety suggesting that simply performing the bare basic movements while continuing to progressively overload them is the most effective training strategy.",
     },
     {
         id: 1,
         imageUrl: "https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
         title: "30 Day No-Warmup Sprint Experiment",
         subtitle: "Does a cheetah warm-up before it catches a zebra? Then why would I.",
-        content: "While everyone tends to have their own unique New Year’s Resolution goals, I’ve never been one to follow this tradition.  However, this year was a bit different (sort of) as I decided to try a 30-day mini experiment on myself starting January 1. The experiment was simple: I would perform sprints with zero warmup for 30 days straight and report the results.",
+        content: "While everyone tends to have their own unique New Year’s Resolution goals, I’ve never been one to follow this tradition.  However, this year was a bit different (sort of) as I decided to try a 30-day mini experiment on myself starting January 1. The experiment was simple: I would perform sprints with zero warmup for 30 days straight and report the results. \n Naturally, your resolution may focus on areas that lack progress, but don’t forget to savor the progress made, and find some small way to celebrate. Those happy feelings are useful! If possible, try to associate them with an object or word related to your accomplishment. \n You will want to keep upbeat with your new resolution, so you can use that positive association with last year’s accomplishments to remind you of those good feelings when you are feeling challenged.",
     },
 ];

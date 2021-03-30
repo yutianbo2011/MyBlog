@@ -7,8 +7,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import NewPost from '../NewPost/NewPost'
 import {connect} from 'react-redux';
 import { NavLink } from 'react-router-dom';
+import { updateCurrentId} from '../../redux/actions'
 
 class MyPosts extends React.Component{
+  // constructor(props){
+  //   super(props);
+    
+  // }
   addNewBlogHandler = ()=>{
     this.setState({addnewBlog: true});
     console.log("add new bolg set as true");
@@ -23,7 +28,7 @@ class MyPosts extends React.Component{
       <Layout>
         <div style={{width: '70%'}}>
           <div >
-              <NavLink to="/newpost" id = 'addNewPost'>
+              <NavLink to="/newpost" id = 'addNewPost' onClick={()=>this.props.updateCurrentId(-1)} >
                 <FontAwesomeIcon icon={faPlusCircle} className='icon'  />
                 Add New Blog
               </NavLink>
@@ -43,4 +48,4 @@ const mapStateToProps = (state) =>{
   return {UpdatedBlogs: state.newPost.MyPosts};
 }
 
-export default connect(mapStateToProps) (MyPosts);
+export default connect(mapStateToProps, {updateCurrentId}) (MyPosts);
