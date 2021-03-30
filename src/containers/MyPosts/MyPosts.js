@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../../components/Layout/Layout';
 import './MyPosts.css';
-import MyPost from '../../components/MyPost/MyPost.js'
+import MyPost from '../MyPost/MyPost.js'
 import { faPlusCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import NewPost from '../NewPost/NewPost'

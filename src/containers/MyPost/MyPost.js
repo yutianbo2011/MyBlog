@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import Card from '../UI/Card/Card';
+import Card from '../../components/UI/Card/Card';
 import './MyPost.css';
 import {NavLink} from 'react-router-dom';
 import {updateCurrentId} from '../../redux/actions';

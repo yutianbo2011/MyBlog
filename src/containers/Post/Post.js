@@ -12,7 +12,6 @@ const Post = (props) => {
           <BlogPost {...props} />
         </Layout>
    )
-
  }
 
 export default Post;

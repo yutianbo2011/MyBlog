@@ -32,13 +32,16 @@ export const Footer = () => {
         <div className='item'>
           <FontAwesomeIcon icon={faPlus} className='icon' />
           <p className='text'>Follow me on</p>
-          <p>
-            <LinkIcon
+          <p >
+            <LinkIcon 
               href={linkedin}
               icon={faLinkedin}
               className='small'
             />
-            <LinkIcon href={github} icon={faGithub} className='small' />
+            <LinkIcon 
+              href={github} 
+              icon={faGithub} 
+              className='small' />
           </p>
         </div>
       </section>
