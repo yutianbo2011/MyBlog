@@ -20,7 +20,7 @@ class MyPosts extends React.Component{
     return;
   }
 
-  
+
   render(){
     // console.log(this.state.MyBlogs);
     console.log("myPosts",this.props.UpdatedBlogs);
@@ -49,3 +49,4 @@ const mapStateToProps = (state) =>{
 }
 
 export default connect(mapStateToProps, {updateCurrentId}) (MyPosts);
+
